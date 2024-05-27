@@ -32,6 +32,11 @@
 $ pnpm install
 ```
 
+## Init new module
+```bash
+$ nest g resource modules/<new resource> --no-spec
+```
+
 ## Running the app
 
 ```bash
