@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  logis:
+    image: mysql:8.0
+    container_name: logis
+    restart: always
+    environment:
+      MYSQL_DATABASE: database_name
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 3306:3306
