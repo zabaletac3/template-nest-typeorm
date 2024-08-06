@@ -14,7 +14,7 @@ import { UpdateUserDto } from '@shared/dtos/user/update-user.dto';
 import { JwtGuard } from '@shared/guards/jwt.guard';
 import { JoiValidationPipe } from '@shared/pipes/joiValidation.pipe';
 import { ApiOkResponse } from '@nestjs/swagger';
-import { User } from '@shared/schemas/user.schema';
+import { User } from '@shared/entities/user.entity';
 
 import { userValidationSchema } from './joiValidation';
 import { UserService } from './user.service';

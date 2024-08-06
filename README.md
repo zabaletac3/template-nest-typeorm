@@ -37,6 +37,15 @@ $ pnpm install
 $ nest g resource modules/<new resource> --no-spec
 ```
 
+## Running Migrations
+```bash
+# Create Migracion
+$ pnpm run migration:generate src/database/migrations/first_migration
+
+# Run Migrations
+$ pnpm run migration:run
+```
+
 ## Running the app
 
 ```bash
