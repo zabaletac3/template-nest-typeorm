@@ -5,7 +5,9 @@ import { ConfigModule } from '@nestjs/config';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { StandardResponseInterceptor } from '@shared/interceptors/standard-response.interceptor';
 import { LoggerMiddleware } from '@shared/middlewares/logger.middleware';
+import { JwtModule } from '@nestjs/jwt';
 
+import { UserModule } from './modules/user/user.module';
 import constants from './constants';
 
 @Module({
@@ -20,6 +22,11 @@ import constants from './constants';
       isGlobal: true,
       store: 'splittier',
     }),
+    JwtModule.register({
+      global: true,
+      secret: constants.JWT_SECRET,
+    }),
+    UserModule,
   ],
   controllers: [],
   providers: [

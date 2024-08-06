@@ -8,7 +8,7 @@ export type UserDocument = HydratedDocument<User>;
   timestamps: true,
   collection: 'users',
 })
-class User {
+export class User {
   @ApiProperty({ type: String, required: true, example: 'John' })
   @Prop({ type: String, required: true })
   firstName: string;

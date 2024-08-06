@@ -21,8 +21,8 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
 
   const config = new DocumentBuilder()
-    .setTitle('Queen Catalina API')
-    .setDescription('The queen catalina API desceription')
+    .setTitle('App name')
+    .setDescription('the Api description')
     .addBearerAuth()
     .setVersion('0.1')
     .build();
